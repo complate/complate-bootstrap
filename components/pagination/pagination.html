@@ -1,0 +1,35 @@
+import { Pagination, PageItem } from "./components/pagination/index.jsx";
+
+<div>
+	<Pagination size="sm">
+		<PageItem>Previous</PageItem>
+		<PageItem href="#">1</PageItem>
+		<PageItem href="#" active>2</PageItem>
+		<PageItem href="#" disabled>3</PageItem>
+		<PageItem href="#">
+			<span aria-hidden>&raquo;</span>
+			<span class="sr-only">Next</span>
+		</PageItem>
+	</Pagination>
+	<Pagination class="justify-content-center" aria-label="Pagination example">
+		<PageItem>Previous</PageItem>
+		<PageItem href="#">1</PageItem>
+		<PageItem href="#" active>2</PageItem>
+		<PageItem href="#" disabled>3</PageItem>
+		<PageItem href="#">
+			<span aria-hidden>&raquo;</span>
+			<span class="sr-only">Next</span>
+		</PageItem>
+	</Pagination>
+	<Pagination class="justify-content-end" size="lg">
+		<PageItem>Previous</PageItem>
+		<PageItem href="#">1</PageItem>
+		<PageItem href="#" active>2</PageItem>
+		<PageItem href="#" disabled>3</PageItem>
+		<PageItem href="#">
+			<span aria-hidden>&raquo;</span>
+			<span class="sr-only">Next</span>
+		</PageItem>
+	</Pagination>
+
+</div>
