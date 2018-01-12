@@ -1,0 +1,77 @@
+import Button from "./components/button";
+
+<div>
+	<p>Contextual variants:</p>
+
+	<p>
+		<Button contextual="default" title="default button">
+			default
+		</Button>
+
+		<Button contextual="primary" title="primary button">
+			primary
+		</Button>
+
+		<Button contextual="success" title="success button">
+			success
+		</Button>
+
+		<Button contextual="info" title="info button">
+			info
+		</Button>
+
+		<Button contextual="warning" title="warning button">
+			warning
+		</Button>
+
+		<Button contextual="danger" title="danger button">
+			danger
+		</Button>
+
+		<Button contextual="link" title="link button">
+			link
+		</Button>
+	</p>
+
+	<p>HTML button types are passed through:</p>
+
+	<p>
+		<Button contextual="primary" type="submit" title="submit button">
+			Submit button
+		</Button>
+
+		<Button contextual="default" type="reset" title="reset button">
+			Reset button
+		</Button>
+	</p>
+
+	<p>All params can be omitted:</p>
+
+	<p>
+		<Button>
+			Button with default values
+		</Button>
+	</p>
+
+	<p>Button sizes:</p>
+
+	<p>
+		<Button contextual="primary" size="lg">Large Button</Button>
+		<Button size="lg">Large Button</Button>
+	</p>
+
+	<p>
+		<Button contextual="primary">Default Button</Button>
+		<Button>Default Button</Button>
+	</p>
+
+	<p>
+		<Button contextual="primary" size="sm">Small Button</Button>
+		<Button size="sm">Small Button</Button>
+	</p>
+
+	<p>
+		<Button contextual="primary" size="xs">Extra small Button</Button>
+		<Button size="xs">Extra small Button</Button>
+	</p>
+</div>
