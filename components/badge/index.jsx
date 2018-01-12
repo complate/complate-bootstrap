@@ -4,16 +4,16 @@ export default function Badge(params, ...children) {
 	params = params || {};
 	let tag = "span";
 	let attrs = {};
-	if (params.href) {
+	if(params.href) {
 		tag = "a";
 		attrs["href"] = params.href;
 	}
 	let classNames = ["badge"];
-	if (params.shape) {
-		classNames.push(`badge-${params.shape}`);
+	if(params.pill) {
+		classNames.push("badge-pill");
 	}
-	if (params.type) {
-		classNames.push(`badge-${params.type}`);
+	if(params.contextual) {
+		classNames.push(`badge-${params.contextual}`);
 	} else {
 		classNames.push("badge-secondary");
 	}
