@@ -1,0 +1,10 @@
+status: prototype
+context:
+    href:
+    - http(s)://URL.TLD
+    active:
+    - true
+    - false
+    disabled:
+    - true
+    - false
