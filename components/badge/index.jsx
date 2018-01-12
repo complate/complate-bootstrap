@@ -12,8 +12,8 @@ export default function Badge(params, ...children) {
 	if (params.shape) {
 		classNames.push(`badge-${params.shape}`);
 	}
-	if (params.type) {
-		classNames.push(`badge-${params.type}`);
+	if (params.contextual) {
+		classNames.push(`badge-${params.contextual}`);
 	} else {
 		classNames.push("badge-secondary");
 	}
