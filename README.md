@@ -1,13 +1,8 @@
-Sample Pattern Library
-======================
+# complate macros for Bootstrap 4
 
-This pattern library is based on [Fractal](https://fractal.build) and
-[complate](https://complate.org). See
-[complate-fractal](https://github.com/complate/complate-fractal) for details.
+WIP
 
-
-Getting Started
----------------
+## Getting Started
 
 * ensure [Node](https://nodejs.org) is installed
 * `npm install` downloads dependencies
