@@ -9,8 +9,8 @@ export default function Badge(params, ...children) {
 		attrs["href"] = params.href;
 	}
 	let classNames = ["badge"];
-	if (params.shape) {
-		classNames.push(`badge-${params.shape}`);
+	if (params.pill) {
+		classNames.push("badge-pill");
 	}
 	if (params.contextual) {
 		classNames.push(`badge-${params.contextual}`);
