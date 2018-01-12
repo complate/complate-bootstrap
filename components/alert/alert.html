@@ -1,0 +1,27 @@
+import { Alert } from "./components/alert";
+
+<div>
+  <p>Contextual variants:</p>
+  <p>
+    {['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'].map(ctx => {
+    return <Alert contextual={ctx}>
+    This is an alert for a {ctx} context.
+  </Alert>
+
+    }) }
+  </p>
+
+  <p>Alert with a heading variant:</p>
+  <p>
+    <Alert contextual="warning" headline="Be aware">
+      Your request failed.
+    </Alert>
+  </p>
+
+  <p>Alert with a close button:</p>
+  <p>
+    <Alert contextual="success" withCloseButton withFadeOut>
+      Congratulations.
+    </Alert>
+  </p>
+</div>
