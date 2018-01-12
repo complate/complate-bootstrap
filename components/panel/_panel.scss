@@ -1,9 +1,0 @@
-content-panel {
-	&.augmented {
-		cursor: pointer;
-	}
-
-	&[aria-expanded=false] > *:not(h3) {
-		display: none;
-	}
-}
