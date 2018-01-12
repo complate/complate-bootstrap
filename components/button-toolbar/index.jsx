@@ -1,9 +1,9 @@
 import { createElement } from "complate-stream";
 
-export default function ButtonToolbar({ class: additionalClass, ariaLabel}, ...children) {
+export default function ButtonToolbar({ class: additionalClass, ariaLabel }, ...children) {
 	let classNames = ["btn-toolbar"];
 
-	if (additionalClass) {
+	if(additionalClass) {
 		classNames.push(additionalClass);
 	}
 

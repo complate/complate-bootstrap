@@ -1,9 +1,9 @@
 import { createElement } from "complate-stream";
 
-export default function ButtonGroup({ class: additionalClass, ariaLabel}, ...children) {
+export default function ButtonGroup({ class: additionalClass, ariaLabel }, ...children) {
 	let classNames = ["btn-group"];
 
-	if (additionalClass) {
+	if(additionalClass) {
 		classNames.push(additionalClass);
 	}
 

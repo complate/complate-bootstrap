@@ -3,24 +3,23 @@ import { createElement } from "complate-stream";
 export default function Navigation(params, ...children) {
 	let { alignment, withFlexColumns, size, variant } = params;
 	let classes = ["nav"];
-	if (variant) {
+	if(variant) {
 		classes.push("nav-" + variant);
 	}
-	if (size) {
+	if(size) {
 		classes.push("nav-" + size);
 	}
-	if (alignment) {
+	if(alignment) {
 		classes.push(alignment);
 	}
-	if (withFlexColumns) {
-		classes.push("flex-column")
+	if(withFlexColumns) {
+		classes.push("flex-column");
 	}
 
 	return <ul class={classes.join(" ")}>
-		{children.map(child =>
-			{
-				return <li class="nav-item">{child}</li>;
-			}
+		{children.map(child => {
+			return <li class="nav-item">{child}</li>;
+		}
 		)}
 	</ul>;
 }
