@@ -2,35 +2,13 @@ import Button from "./components/button";
 
 <div>
 	<p>Contextual variants:</p>
-
 	<p>
-		<Button contextual="default" title="default button">
-			default
+		{['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'link'].map(ctx => {
+			return <Button contextual={ctx} title="`ctx` button">
+			{ctx}
 		</Button>
 
-		<Button contextual="primary" title="primary button">
-			primary
-		</Button>
-
-		<Button contextual="success" title="success button">
-			success
-		</Button>
-
-		<Button contextual="info" title="info button">
-			info
-		</Button>
-
-		<Button contextual="warning" title="warning button">
-			warning
-		</Button>
-
-		<Button contextual="danger" title="danger button">
-			danger
-		</Button>
-
-		<Button contextual="link" title="link button">
-			link
-		</Button>
+		}) }
 	</p>
 
 	<p>HTML button types are passed through:</p>
@@ -40,7 +18,7 @@ import Button from "./components/button";
 			Submit button
 		</Button>
 
-		<Button contextual="default" type="reset" title="reset button">
+		<Button contextual="secondary" type="reset" title="reset button">
 			Reset button
 		</Button>
 	</p>
@@ -68,10 +46,5 @@ import Button from "./components/button";
 	<p>
 		<Button contextual="primary" size="sm">Small Button</Button>
 		<Button size="sm">Small Button</Button>
-	</p>
-
-	<p>
-		<Button contextual="primary" size="xs">Extra small Button</Button>
-		<Button size="xs">Extra small Button</Button>
 	</p>
 </div>

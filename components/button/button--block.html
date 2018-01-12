@@ -1,0 +1,14 @@
+import Button from "./components/button";
+
+<div>
+	<p>Block level buttons:</p>
+
+	<p>
+		{['primary', 'secondary'].map(ctx => {
+			return <Button block contextual={ctx} title="primary button">
+			{ctx}
+		</Button>
+
+		}) }
+	</p>
+</div>
