@@ -6,7 +6,12 @@ let stylesheets = [
 	"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css",
 	context.uri("common-assets", "bundle.css")
 ];
-let scripts = [context.uri("common-assets", "bundle.js")];
+let scripts = [
+	"https://code.jquery.com/jquery-3.2.1.slim.min.js",
+	"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
+	"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js",
+	context.uri("common-assets", "bundle.js")
+];
 
 export default function PreviewLayout({ context }, ...children) {
 	return <html lang="en">
