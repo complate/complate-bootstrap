@@ -2,7 +2,10 @@ import { context } from "./env";
 import { createElement } from "complate-stream";
 
 let title = "Fractal Preview";
-let stylesheets = [context.uri("common-assets", "bundle.css")];
+let stylesheets = [
+	"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css",
+	context.uri("common-assets", "bundle.css")
+];
 let scripts = [context.uri("common-assets", "bundle.js")];
 
 export default function PreviewLayout({ context }, ...children) {
