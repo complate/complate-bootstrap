@@ -3,41 +3,46 @@ import { createElement } from "complate-stream";
 export function ListGroup({ class: additionalClass }, ...children) {
 	let klass = ["list-group"];
 
-	if(additionalClass) {
+	if (additionalClass) {
 		klass.push(additionalClass);
 	}
 
-	return <ul class={ klass.join(" ") }>
-		{children}
-	</ul>;
+	return <ul class={klass.join(" ")}>{children}</ul>;
 }
 
-export function ListGroupItem({ class: additionalClass, active, disabled, contextual, href }, ...children) {
+export function ListGroupItem(
+	{ class: additionalClass, active, disabled, contextual, href },
+	...children
+) {
 	let klass = ["list-group-item"];
 
-	if(additionalClass) {
+	if (additionalClass) {
 		klass.push(additionalClass);
 	}
 
-	if(active) {
+	if (active) {
 		klass.push("active");
 	}
 
-	if(disabled) {
+	if (disabled) {
 		klass.push("disabled");
 	}
 
-	if(contextual) {
+	if (contextual) {
 		klass.push(`list-group-item-${contextual}`);
 	}
 
 	let listGroupItem;
 
-	if(href) {
+	if (href) {
 		klass.push("list-group-item-action");
-		listGroupItem = <a href={ href } class={ klass.join(" ") }>{children}</a>;
+		listGroupItem = (
+			<a href={href} class={klass.join(" ")}>
+				{children}
+			</a>
+		);
 	} else {
-		listGroupItem = <li class={ klass.join(" ") }>{children}</li>;
+		listGroupItem = <li class={klass.join(" ")}>{children}</li>;
 	}
 
 	return listGroupItem;

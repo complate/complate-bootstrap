@@ -1,7 +1,9 @@
 {
 	"scripts": {
 		"start": "npm-run-all --parallel server-watch compile-watch",
-		"test": "eslint --cache --ext .js --ext .jsx --ignore-path .gitignore *.js lib components && echo ✓",
+		"test": "npm-run-all --parallel format lint",
+		"lint": "eslint --cache --ext .js --ext .jsx --ignore-path .gitignore *.js lib components && echo ✓",
+		"format": "prettier --jsx-bracket-same-line true --list-different --write '{lib/scripts,components}/**/*.js{,x}'",
 		"dist": "npm run compile && npm run site",
 		"site": "fractal build",
 		"server-watch": "nodemon -I -w components -e jsx -x 'npm run server'",
@@ -18,6 +20,7 @@
 		"faucet-pipeline-js": "^0.15.5",
 		"faucet-pipeline-sass": "^0.9.0",
 		"nodemon": "^1.12.1",
-		"npm-run-all": "^4.1.2"
+		"npm-run-all": "^4.1.2",
+		"prettier": "^1.10.2"
 	}
 }

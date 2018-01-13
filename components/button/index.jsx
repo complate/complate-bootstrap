@@ -1,39 +1,58 @@
 import { createElement } from "complate-stream";
 
-export default function Button({ class: additionalClass, active, disabled, block, outline, contextual, title, type: typeName, size }, ...children) {
+export default function Button(
+	{
+		class: additionalClass,
+		active,
+		disabled,
+		block,
+		outline,
+		contextual,
+		title,
+		type: typeName,
+		size
+	},
+	...children
+) {
 	let classNames = ["btn"];
 
-	if(additionalClass) {
+	if (additionalClass) {
 		classNames.push(additionalClass);
 	}
 
-	if(active) {
+	if (active) {
 		classNames.push("active");
 	}
 
-	if(disabled) {
+	if (disabled) {
 		classNames.push("disabled");
 	}
 
-	if(contextual && outline) {
+	if (contextual && outline) {
 		classNames.push(`btn-outline-${contextual}`);
-	} else if(contextual) {
+	} else if (contextual) {
 		classNames.push(`btn-${contextual}`);
 	}
 
-	if(size) {
+	if (size) {
 		classNames.push(`btn-${size}`);
 	}
 
-	if(block) {
+	if (block) {
 		classNames.push("btn-block");
 	}
 
-	if(!typeName) {
+	if (!typeName) {
 		typeName = "button";
 	}
 
-	return <button disabled={disabled} type={typeName} class={classNames.join(" ")} title={title}>
-		{children}
-	</button>;
+	return (
+		<button
+			disabled={disabled}
+			type={typeName}
+			class={classNames.join(" ")}
+			title={title}>
+			{children}
+		</button>
+	);
 }

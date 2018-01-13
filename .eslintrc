@@ -10,3 +10,6 @@ extends:
 
 rules:
     compat/compat: error
+    indent: off
+    keyword-spacing: off
+    dot-location: off

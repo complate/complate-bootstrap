@@ -14,24 +14,29 @@ let scripts = [
 ];
 
 export default function PreviewLayout({ context }, ...children) {
-	return <html lang="en">
-		<head>
-			<meta charset="utf-8" />
-			<title>{title}</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			{renderStyleSheets(stylesheets)}
-		</head>
+	return (
+		<html lang="en">
+			<head>
+				<meta charset="utf-8" />
+				<title>{title}</title>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1"
+				/>
+				{renderStyleSheets(stylesheets)}
+			</head>
 
-		<body>
-			{children}
+			<body>
+				{children}
 
-			{renderScripts(scripts)}
-		</body>
-	</html>;
+				{renderScripts(scripts)}
+			</body>
+		</html>
+	);
 }
 
 function renderStyleSheets(items) {
-	if(!items || !items.length) {
+	if (!items || !items.length) {
 		return;
 	}
 
@@ -41,7 +46,7 @@ function renderStyleSheets(items) {
 }
 
 function renderScripts(items) {
-	if(!items || !items.length) {
+	if (!items || !items.length) {
 		return;
 	}
 
