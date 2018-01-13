@@ -1,21 +1,18 @@
 import { createElement } from "complate-stream";
 
-export default function Badge(params, ...children) {
-	params = params || {};
+export default function Badge({ class: additionalClass, contextual = "secondary", href, pill }, ...children) {
 	let tag = "span";
 	let attrs = {};
-	if (params.href) {
+	if(href) {
 		tag = "a";
-		attrs["href"] = params.href;
+		attrs["href"] = href;
 	}
-	let classNames = ["badge"];
-	if (params.shape) {
-		classNames.push(`badge-${params.shape}`);
+	let classNames = ["badge", `badge-${contextual}`];
+	if(pill) {
+		classNames.push("badge-pill");
 	}
-	if (params.type) {
-		classNames.push(`badge-${params.type}`);
-	} else {
-		classNames.push("badge-secondary");
+	if(!additionalClass) {
+		classNames.push(additionalClass);
 	}
 	attrs["class"] = classNames.join(" ");
 	return createElement(tag, attrs, children);

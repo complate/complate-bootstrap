@@ -1,0 +1,18 @@
+import ButtonToolbar from "./components/button-toolbar";
+import ButtonGroup from "./components/button-group";
+import Button from "./components/button";
+
+<ButtonToolbar ariaLabel="Some toolbar label">
+	<ButtonGroup ariaLabel="First group" class="mr-2">
+		<Button contextual="primary">Primus</Button>
+		<Button contextual="secondary">Secundus</Button>
+		<Button contextual="success">Tertius</Button>
+	</ButtonGroup>
+
+	<ButtonGroup ariaLabel="Second group">
+		<Button contextual="primary">Lorem</Button>
+		<Button contextual="secondary">Ipsum</Button>
+		<Button active contextual="success">Dolor</Button>
+		<Button disabled contextual="warning">Sit Amet</Button>
+	</ButtonGroup>
+</ButtonToolbar>

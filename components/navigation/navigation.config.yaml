@@ -1,0 +1,15 @@
+title: "Navigation"
+status: "prototype"
+context:
+    variant:
+    - pills
+    - tabs
+    size:
+    - justified
+    - fill
+    withFlexColumns:
+    - true
+    - false
+    alignment:
+    - justify-content-center
+    - justify-content-end

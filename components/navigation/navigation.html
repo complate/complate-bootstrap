@@ -1,0 +1,22 @@
+import Navigation from "./components/navigation";
+import Link from "./components/link";
+
+<div>
+	<Navigation variant="pills" alignment="justify-content-end">
+		<Link active href="/" title="home-link">Home</Link>
+		<Link href="/about" title="about-link">About</Link>
+		<Link href="/contact" title="contact-link">Contact</Link>
+	</Navigation>
+
+	<Navigation alignment="justify-content-center">
+		<Link active href="/" title="home-link">Home</Link>
+		<Link href="/about" title="about-link">About</Link>
+		<Link disabled href="/contact" title="contact-link">Contact</Link>
+	</Navigation>
+
+	<Navigation variant="tabs" withFlexColumns>
+		<Link active href="/" title="home-link">Home</Link>
+		<Link href="/about" title="about-link">About</Link>
+		<Link href="/contact" title="contact-link">Contact</Link>
+	</Navigation>
+</div>
