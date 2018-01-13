@@ -33,7 +33,7 @@ export default function Button({ class: additionalClass, active, disabled, block
 		typeName = "button";
 	}
 
-	return <button disabled={disabled} type={typeName} class={classNames.join(" ")} title={title} aria-role="button">
+	return <button disabled={disabled} type={typeName} class={classNames.join(" ")} title={title}>
 		{children}
 	</button>;
 }
