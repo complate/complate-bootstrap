@@ -9,9 +9,6 @@ export default function Link(params, ...children) {
 	if(disabled) {
 		classes.push("disabled");
 	}
-	if(disabled) {
-		return <a class={classes.join(" ")} title={title}>{children}</a>;
-	} else {
-		return <a class={classes.join(" ")} href={href} title={title}>{children}</a>;
-	}
+
+	return <a class={classes.join(" ")} href={href} title={title}>{children}</a>;
 }
