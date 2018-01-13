@@ -1,23 +1,21 @@
 import { createElement } from "complate-stream";
 
-export default function Dropdown({ id, class: additionalClass, label, contextual = "secondary",
-									 active, disabled, type: typeName = "button", size }, ...children) {
-
+export default function Dropdown({ id, class: additionalClass, label, contextual = "secondary", active, disabled, type: typeName = "button", size }, ...children) {
 	let classNames = ["dropdown-toggle", "btn", `btn-${contextual}`];
 
-	if (additionalClass) {
+	if(additionalClass) {
 		classNames.push(additionalClass);
 	}
 
-	if (active) {
+	if(active) {
 		classNames.push("active");
 	}
 
-	if (disabled) {
+	if(disabled) {
 		classNames.push("disabled");
 	}
 
-	if (size) {
+	if(size) {
 		classNames.push(`btn-${size}`);
 	}
 
@@ -26,7 +24,7 @@ export default function Dropdown({ id, class: additionalClass, label, contextual
 			{label}
 		</button>
 		<div class="dropdown-menu" aria-labelledby={id}>
-	    	{children}
+			{children}
 		</div>
-	  </div>
+	</div>;
 }
