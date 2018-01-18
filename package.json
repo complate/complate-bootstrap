@@ -1,9 +1,10 @@
 {
 	"scripts": {
 		"start": "npm-run-all --parallel server-watch compile-watch",
-		"test": "npm-run-all --parallel format lint",
+		"test": "npm-run-all --parallel format:check lint",
 		"lint": "eslint --cache --ext .js --ext .jsx --ignore-path .gitignore *.js lib components && echo ✓",
-		"format": "prettier --jsx-bracket-same-line true --list-different --write '{lib/scripts,components}/**/*.js{,x}'",
+		"format": "prettier --jsx-bracket-same-line true --write '{lib/scripts,components}/**/*.js{,x}'",
+		"format:check": "npm run format -- --debug-check --list-different --no-write",
 		"dist": "npm run compile && npm run site",
 		"site": "fractal build",
 		"server-watch": "nodemon -I -w components -e jsx -x 'npm run server'",
