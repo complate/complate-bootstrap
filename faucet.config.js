@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-	watchDirs: ["./lib", "./components"]
+	watchDirs: ["./lib", "./components"],
 	sass: [{
 		source: "./lib/styles/index.scss",
 		target: "./assets/bundle.css"
