@@ -1,4 +1,16 @@
 {
+	"name": "complate-bootstrap",
+	"description": "complate macros for Bootstrap 4",
+	"author": "FND",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/complate/complate-bootstrap",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/complate/complate-bootstrap.git"
+	},
+	"bugs": {
+		"url": "https://github.com/complate/complate-bootstrap/issues"
+	},
 	"scripts": {
 		"start": "npm-run-all --parallel server-watch compile-watch",
 		"test": "npm-run-all --parallel format:check lint",
