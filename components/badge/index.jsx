@@ -8,7 +8,7 @@ export default function Badge(
 	let attrs = {};
 	if (href) {
 		tag = "a";
-		attrs["href"] = href;
+		attrs.href = href;
 	}
 	let classNames = ["badge", `badge-${contextual}`];
 	if (pill) {
@@ -17,6 +17,6 @@ export default function Badge(
 	if (!additionalClass) {
 		classNames.push(additionalClass);
 	}
-	attrs["class"] = classNames.join(" ");
+	attrs.class = classNames.join(" ");
 	return createElement(tag, attrs, children);
 }

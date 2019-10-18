@@ -27,11 +27,11 @@ export function PageItem({ active, disabled, href }, ...children) {
 	}
 	if (disabled || !href) {
 		klass.push("disabled");
-		attrs["tabindex"] = -1;
+		attrs.tabindex = -1;
 	}
 	if (href) {
 		tag = "a";
-		attrs["href"] = href;
+		attrs.href = href;
 	}
 	return (
 		<li class={klass.join(" ")}>{createElement(tag, attrs, children)}</li>
