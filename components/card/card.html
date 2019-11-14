@@ -1,0 +1,25 @@
+import { Card, CardImg, CardHeader, CardBody, CardTitle, CardSubtitle, CardText } from "./components/card";
+import Button from "./components/button";
+
+<div style="width: 18rem;">
+	<h2>Card with image</h2>
+	<Card>
+		<CardImg src="http://lorempixel.com/output/abstract-q-g-286-180-4.jpg"
+			alt="An abstract thing"/>
+		<CardBody>
+			<CardTitle>Hello World</CardTitle>
+			<CardSubtitle class="mb-2 text-muted">Hello indeed</CardSubtitle>
+			<CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+			<Button>Go somewhere</Button>
+		</CardBody>
+	</Card>
+
+	<h2>Card with header</h2>
+	<Card>
+		<CardHeader>Something awesome</CardHeader>
+		<CardBody>
+			<CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+			<Button>Go somewhere</Button>
+		</CardBody>
+	</Card>
+</div>
